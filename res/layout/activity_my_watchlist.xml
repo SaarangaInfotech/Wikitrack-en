@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/activitiy_header_height"
+            android:background="@drawable/menu_header" >
+
+            <ImageView
+                android:id="@+id/wl_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/menu_item_background"
+                android:src="@drawable/ic_menu_home_custom" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/header_title_width"
+                android:layout_height="@dimen/header_title_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/wl_home"
+                android:src="@drawable/app_title" />
+
+            <!-- <TextView -->
+            <!-- android:id="@+id/activity_my_watchlist_header_title" -->
+            <!-- style="@style/menu_title" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_centerVertical="true" -->
+            <!-- android:layout_toRightOf="@+id/wl_home" -->
+            <!-- android:text="@string/en_my_watchlist" -->
+            <!-- android:textSize="20sp" /> -->
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/wltv1"
+            style="@style/activity_label_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:text="@string/en_my_watchlist_label"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:id="@+id/text_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/wl_instruction_text"
+                style="@style/username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/en_wl_notfeed_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/instruction_text_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/wl_token_username_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_outline_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/wl_token_username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/en_enter_username_message"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/wl_token_username_box"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/username_hint_text"
+                android:inputType="text|textAutoComplete" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/wl_token_token_label"
+                style="@style/username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/en_enter_wltoken"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/wl_token_token_box"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/wltoken_hint_text"
+                android:inputType="text|textAutoComplete" />
+
+            <RelativeLayout
+                android:id="@+id/wl_token_description_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activitiy_header_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/menu_header" >
+
+                <TextView
+                    android:id="@+id/wl_token_description_btn_button"
+                    style="@style/activity_label_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/en_setting_wltoken"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/wl_token_description_btn_button"
+                    android:src="@drawable/ic_menu_help" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/wl_token_getfeed_btn"
+                style="@style/wiki_items_button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activitiy_header_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/menu_header"
+                android:text="@string/en_get_feed"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/wl_token_show_token_fields_btn"
+                style="@style/wiki_items_button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activitiy_header_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/menu_header"
+                android:text="@string/en_enter_token"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/username_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="OR"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/wl_username_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/text_outline_background"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/wl_login_username_label"
+                style="@style/username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/en_enter_username_message"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/wl_login_username_box"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/username_hint_text" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/wl_login_pswd_label"
+                style="@style/username_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/en_password_enter"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/wl_login_pswd_box"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:hint="@string/password_hint_text"
+                android:inputType="textPassword" />
+
+            <CheckBox
+                android:id="@+id/wl_login_save_pswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/en_save_passwrd"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/wl_login_getfeed_btn"
+                style="@style/wiki_items_button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activitiy_header_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/menu_header"
+                android:text="@string/en_login"
+                android:textSize="20dp" />
+
+            <Button
+                android:id="@+id/wl_login_show_token_fields_btn"
+                style="@style/wiki_items_button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/activitiy_header_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/menu_header"
+                android:text="@string/en_login"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
